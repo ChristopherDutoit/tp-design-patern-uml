@@ -66,4 +66,25 @@ class MainController extends Render{
         ];
         $this->render($data_page);
     }
+
+
+    public function signin(){
+        $data_page = [
+            "page_description" => "Description de la page erreur",
+            "page_title" => "S'inscrire",
+            "view" => "Views/signin.view.php",
+            "template" => "Views/Layouts/base.php"
+        ];
+        $this->render($data_page);
+    }
+
+    public function login(){
+        $data_page = [
+            "page_description" => "Description de la page erreur",
+            "page_title" => "Se connecter",
+            "view" => "Views/login.view.php",
+            "template" => "Views/Layouts/base.php"
+        ];
+        $this->render($data_page);
+    }
 }
