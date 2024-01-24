@@ -13,7 +13,6 @@ abstract class Model{
         if(self::$pdo === null){
             self::setBdd();
         }
-
         return self::$pdo;
     }
 }
