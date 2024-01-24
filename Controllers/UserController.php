@@ -16,8 +16,8 @@ class UserController extends Render {
         {
             $mdp = password_hash($password, PASSWORD_DEFAULT);
             $this->adherant->createUser($fname, $lname, $email, $mdp);
-
-            Toolbox::addAlert('Compte créer ave succès', Toolbox::COULEUR_VERTE);
+            echo('bonjour');
+            Toolbox::addAlert('Compte créé avec succès', Toolbox::COULEUR_VERTE);
             $data_page = [
                 "page_description" => "Description de la page erreur",
                 "page_title" => "Se connecter",

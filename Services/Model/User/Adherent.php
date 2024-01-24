@@ -11,10 +11,10 @@ class Adherent extends User
 
     public function createUser($fname, $lname, $email, $mdp) : void
     {
-        $mdp = password_hash($password, PASSWORD_DEFAULT);
+        $mdp = password_hash($mdp, PASSWORD_DEFAULT);
         $userManager = new UserManager;
         $info = []; 
-        $info['fisrt_name'] = $fname;
+        $info['first_name'] = $fname;
         $info['last_name'] = $lname;
         $info['tel'] = $email;
         $info['mail'] = $email;
