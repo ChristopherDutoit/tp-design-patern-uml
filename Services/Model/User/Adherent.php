@@ -21,4 +21,6 @@ class Adherent extends User
         var_dump($info);      
         $userManager->setUser($info);
     }
+
+  
 }

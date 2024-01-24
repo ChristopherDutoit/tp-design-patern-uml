@@ -17,9 +17,12 @@ abstract class User implements UserInterface {
 
     }
 
-    public function getUserById($userId)
+    public function getUserByEmail($email)
     {
-
+        $userManager = new UserManager;
+        $datas = $userManager->getUser($email);
+        return $datas;
+        
     }
 
 
@@ -33,4 +36,8 @@ abstract class User implements UserInterface {
     {
 
     }
+
+    
+
+
 }
