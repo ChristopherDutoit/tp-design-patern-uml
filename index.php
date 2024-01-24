@@ -20,6 +20,10 @@ switch($page){
             break; 
         case "page3" :  $mainController->page3();
             break;   
+        case 'signin' : $mainController->signin();
+            break;
+        case 'login' : $mainController->login();
+            break;  
         default : throw new Exception("La page n'existe pas");          
 }
 }
