@@ -9,7 +9,7 @@ class Adherent extends User
         $this->roleId = 1; 
     }
 
-    public function createUser($fname, $lname, $email, $password) : void
+    public function createUser($fname, $lname, $email, $mdp) : void
     {
         $mdp = password_hash($password, PASSWORD_DEFAULT);
         $userManager = new UserManager;
@@ -19,7 +19,8 @@ class Adherent extends User
         $info['tel'] = $email;
         $info['mail'] = $email;
         $info['role'] = $this->roleId;
-        $info['password'] = $mdp;        
+        $info['password'] = $mdp;  
+        var_dump($info);      
         $userManager->setUser($info);
     }
 }
