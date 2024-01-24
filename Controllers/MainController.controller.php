@@ -11,7 +11,6 @@ class MainController extends Render{
         $this->mainManager = new MainManager;
     }
     public function accueil(){
-        var_dump($_SESSION);
         $data_page = [
             "page_description" => "Description de la page d'accueil",
             "page_title" => "Titre de la page d'accueil",
@@ -23,13 +22,11 @@ class MainController extends Render{
     }
 
     public function page1(){
-        $datas = $this->mainManager->getDatas();
         Toolbox::addAlert('test', Toolbox::COULEUR_VERTE);
         $data_page = [
             "page_description" => "Description de la page 1",
             "page_title" => "Page 1",
             "page_css" => ["pages.css"],
-            "datas" => $datas,
             "view" => "Views/Page1.view.php",
             "template" => "Views/Layouts/base.php"
         ];
@@ -86,5 +83,15 @@ class MainController extends Render{
             "template" => "Views/Layouts/base.php"
         ];
         $this->render($data_page);
+    }
+
+    public function logout(){
+        unset($_SESSION['fname']);
+        unset($_SESSION['lname']);
+        unset($_SESSION['email']);
+        unset($_SESSION['role']);
+        Toolbox::addAlert("Vous êtes déconnecté", Toolbox::COULEUR_VERTE); 
+        header("Location: " . URL . "accueil");
+
     }
 }
