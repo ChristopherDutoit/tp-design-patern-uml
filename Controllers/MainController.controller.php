@@ -11,6 +11,7 @@ class MainController extends Render{
         $this->mainManager = new MainManager;
     }
     public function accueil(){
+        var_dump($_SESSION);
         $data_page = [
             "page_description" => "Description de la page d'accueil",
             "page_title" => "Titre de la page d'accueil",
