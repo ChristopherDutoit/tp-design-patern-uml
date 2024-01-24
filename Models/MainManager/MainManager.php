@@ -21,5 +21,5 @@ class MainManager extends Model
         $datas = $req->fetchAll(PDO::FETCH_ASSOC);
         $req->closeCursor();
         return $datas;
-    }
+    } 
 }
