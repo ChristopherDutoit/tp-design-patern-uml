@@ -15,9 +15,6 @@
             <ul class="lg:flex items-center justify-between text-base text-white pt-4 lg:pt-0">
                 <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400" href="<?=URL?>accueil">Accueil</a></li>
                 <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400" href="<?=URL?>page1">Page1</a></li>
-                <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400" href="<?=URL?>signin">S'inscrire</a></li>
-                <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400" href="<?=URL?>login">Se connecter</a></li>
-                <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400" href="<?=URL?>logout">Se deconnecter</a></li>
                 <li class="relative">
                     <button id="dropdownButton" class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400">
                         Liste déroulante
@@ -27,6 +24,12 @@
                         <li><a class="rounded-t bg-gray-200 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap" href="<?=URL?>page3">Page3</a></li>
                     </ul>
                 </li>
+                <?php if(isset($_SESSION['fname'])) :?>
+                <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400" href="<?=URL?>logout">Se deconnecter</a></li>
+                <?php else: ?>
+                <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400" href="<?=URL?>login">Se connecter</a></li>
+                <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400" href="<?=URL?>signin">S'inscrire</a></li>
+                <?php endif ?>
             </ul>
         </div>
     </div>
