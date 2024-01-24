@@ -11,7 +11,16 @@
     <input type="email" id="email" name="email" required><br>
     
     <label for="password">Mot de passe</label><br/>
-    <input type="password" idp="password" name="password" required><br/>
+    <input type="password" id="password" name="password" required><br/>
 
-    <input type="submit" value="S'inscrire">
+    <input type="submit" name="submit" value="S'inscrire">
 </form> 
+
+<?php
+
+if(isset($_POST["submit"])){
+    require_once("Controllers/UserController.php");
+    $UserController = new UserController;
+    $UserController->createUser($_POST["fname"], $_POST["lname"], $_POST["email"], $_POST["password"]);
+}
+?>

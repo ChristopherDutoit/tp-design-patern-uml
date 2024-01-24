@@ -67,7 +67,6 @@ class MainController extends Render{
         $this->render($data_page);
     }
 
-
     public function signin(){
         $data_page = [
             "page_description" => "Description de la page erreur",
