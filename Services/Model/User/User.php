@@ -1,6 +1,7 @@
 <?php
 
-require_once('Services/Model/User/UserInterface.php');
+require_once('UserInterface.php');
+require_once('Models/UserManager/UserManager.php');
 
 abstract class User implements UserInterface {
 
@@ -8,7 +9,6 @@ abstract class User implements UserInterface {
     public string $lname;
     public string $email;
     public int $roleId;
-
     private string $passWord;
 
     function __construct()
@@ -16,22 +16,19 @@ abstract class User implements UserInterface {
 
     }
 
-    public function getUserById($userId);
+    public function getUserById($userId)
     {
 
     }
 
-    public function createUser($fname, $lname, $email, $password)
+
+
+    public function updateUserEmail($userId, $email) : void
     {
 
     }
 
-    public function updateUserEmail($userId, $email)
-    {
-
-    }
-
-    public function deleteUser($userId)
+    public function deleteUser($userId) : void
     {
 
     }
