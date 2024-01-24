@@ -20,7 +20,7 @@ class UserManager extends Model {
         $req->bindParam(':last_name', $info['last_name'], PDO::PARAM_STR);
         $req->bindParam(':tel', $info['tel'], PDO::PARAM_STR);
         $req->bindParam(':mail', $info['mail'], PDO::PARAM_STR);
-        $req->bindParam(':role', $info['role'], PDO::PARAM_STR);
+        $req->bindParam(':role', $info['role'], PDO::PARAM_INT);
     
         $req->execute();
     }
