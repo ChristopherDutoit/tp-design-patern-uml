@@ -1,7 +1,9 @@
 <?php 
 
-class LivreFactory implements FactoryInterface {
-    public static function create($titre, $auteur) {
-        return new Livre($titre, $auteur);
+require_once './Services/Model/Book/Book.php';
+
+class LivreFactory {
+    public static function create($title, $author, $isbn) {
+        return new Book($title, $author, $isbn);
     }
 }
