@@ -17,6 +17,7 @@
                 <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400" href="<?=URL?>page1">Page1</a></li>
                 <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400" href="<?=URL?>signin">S'inscrire</a></li>
                 <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400" href="<?=URL?>login">Se connecter</a></li>
+                <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400" href="<?=URL?>logout">Se deconnecter</a></li>
                 <li class="relative">
                     <button id="dropdownButton" class="lg:p-4 py-3 px-0 block border-b-2 border-transparent lg:border-none hover:border-indigo-400">
                         Liste déroulante

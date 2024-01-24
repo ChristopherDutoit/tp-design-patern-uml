@@ -24,6 +24,8 @@ switch($page){
             break;
         case 'login' : $mainController->login();
             break;  
+        case 'logout' : $mainController->logout();
+            break;
         default : throw new Exception("La page n'existe pas");          
 }
 }

@@ -42,8 +42,8 @@ class UserController extends Render {
             $_SESSION['lname'] = $datas[0]['last_name'];
             $_SESSION['email'] = $datas[0]['mail'];
             $_SESSION['role'] = $datas[0]['role'];
-            var_dump($_SESSION) ;
-            //header("Location: " . URL . "accueil");
+            Toolbox::addAlert("Vous êtes connecté", Toolbox::COULEUR_VERTE);         
+            header("Location: " . URL . "accueil");
         } else {
             echo "Le mot de passe est incorrect!";
         }
