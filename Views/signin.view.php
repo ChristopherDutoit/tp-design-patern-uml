@@ -1,6 +1,6 @@
 <h2>Formulaire d'Inscription</h2>
 
-<form action="#" method="post">
+<form action="" method="post">
     <label for="fname">Prénom:</label><br>
     <input type="text" id="fname" name="fname" required><br>
 
@@ -20,7 +20,7 @@
 
 if(isset($_POST["submit"])){
     require_once("Controllers/UserController.php");
-    $UserController = new UserController($_POST["fname"], $_POST["lname"], $_POST["email"], $_POST["password"]);
-    
+    $UserController = new UserController;
+    $UserController->createUser($_POST["fname"], $_POST["lname"], $_POST["email"], $_POST["password"]);
 }
 ?>
